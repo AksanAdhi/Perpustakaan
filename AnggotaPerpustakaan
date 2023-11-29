@@ -1,0 +1,65 @@
+
+package perpustakaan;
+import java.util.List;
+
+public class AnggotaPerpustakaan {
+    // Atribut
+    private String idAnggota;
+    private String nama;
+    private String alamat;
+    private List<String> riwayatPeminjaman;
+
+    // Konstruktor
+    public AnggotaPerpustakaan(String idAnggota, String nama, String alamat, List<String> riwayatPeminjaman) {
+        this.idAnggota = idAnggota;
+        this.nama = nama;
+        this.alamat = alamat;
+        this.riwayatPeminjaman = riwayatPeminjaman;
+    }
+
+    // Method untuk mendapatkan detail anggota perpustakaan
+    public String getDetail() {
+        return "ID Anggota: " + idAnggota + "\n"
+             + "Nama: " + nama + "\n"
+             + "Alamat: " + alamat + "\n"
+             + "Riwayat Peminjaman: " + riwayatPeminjaman.toString();
+    }
+
+    // Getter dan setter (opsional)
+    public String getIdAnggota() {
+        return idAnggota;
+    }
+
+    public void setIdAnggota(String idAnggota) {
+        this.idAnggota = idAnggota;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
+    }
+
+    public List<String> getRiwayatPeminjaman() {
+        return riwayatPeminjaman;
+    }
+
+    public void setRiwayatPeminjaman(List<String> riwayatPeminjaman) {
+        this.riwayatPeminjaman = riwayatPeminjaman;
+    }
+
+    String getDetails() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
+
