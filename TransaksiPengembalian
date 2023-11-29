@@ -1,0 +1,32 @@
+package perpustakaan;
+
+
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+public class TransaksiPengembalian {
+    private Buku buku;
+    private AnggotaPerpustakaan anggota;
+    private Date tanggalPengembalian;
+    private String waktuPengembalian;
+
+    // Konstruktor
+    public TransaksiPengembalian(Buku buku, AnggotaPerpustakaan anggota, Date tanggalPengembalian, String waktuPengembalian) {
+        this.buku = buku;
+        this.anggota = anggota;
+        this.tanggalPengembalian = tanggalPengembalian;
+        this.waktuPengembalian = waktuPengembalian;
+    }
+
+    // Method untuk mendapatkan detail transaksi pengembalian
+    public String getDetail() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String formattedDate = dateFormat.format(tanggalPengembalian);
+
+        return "Buku yang dikembalikan: " + buku.getDetail() + "\n"
+             + "Anggota yang mengembalikan: " + anggota.getDetails() + "\n"
+             + "Tanggal Pengembalian: " + formattedDate + "\n"
+             + "Waktu Pengembalian: " + waktuPengembalian;
+    }
+}
+
