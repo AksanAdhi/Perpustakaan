@@ -1,0 +1,67 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package perpustakaan;
+
+/**
+ *
+ * @author backy
+ */
+import java.util.ArrayList;
+import java.util.List;
+
+public class Admin {
+    private String username;
+    private String password;
+    private List<String> daftarBuku;
+    private List<String> daftarAnggota;
+
+    // Constructor
+    public Admin(String username, String password) {
+        this.username = username;
+        this.password = password;
+        this.daftarBuku = new ArrayList<>();
+        this.daftarAnggota = new ArrayList<>();
+    }
+
+    // Method untuk menambah buku
+    public void tambahBuku(String judulBuku) {
+        daftarBuku.add(judulBuku);
+        System.out.println("Buku '" + judulBuku + "' berhasil ditambahkan.");
+    }
+
+    // Method untuk menghapus buku
+    public void hapusBuku(String judulBuku) {
+        if (daftarBuku.contains(judulBuku)) {
+            daftarBuku.remove(judulBuku);
+            System.out.println("Buku '" + judulBuku + "' berhasil dihapus.");
+        } else {
+            System.out.println("Buku '" + judulBuku + "' tidak ditemukan.");
+        }
+    }
+
+    // Method untuk menambah anggota
+    public void tambahAnggota(String namaAnggota) {
+        daftarAnggota.add(namaAnggota);
+        System.out.println("Anggota '" + namaAnggota + "' berhasil ditambahkan.");
+    }
+
+    // Method untuk menghapus anggota
+    public void hapusAnggota(String namaAnggota) {
+        if (daftarAnggota.contains(namaAnggota)) {
+            daftarAnggota.remove(namaAnggota);
+            System.out.println("Anggota '" + namaAnggota + "' berhasil dihapus.");
+        } else {
+            System.out.println("Anggota '" + namaAnggota + "' tidak ditemukan.");
+        }
+    }
+
+    // Method untuk generate laporan
+    public void generateLaporan() {
+        System.out.println("Laporan berhasil di-generate.");
+        // Implementasi logika untuk menghasilkan laporan
+    }
+}
+
