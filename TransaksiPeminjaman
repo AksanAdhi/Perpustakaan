@@ -1,0 +1,30 @@
+
+package perpustakaan;
+
+import java.util.Date;
+
+public class TransaksiPeminjaman {
+    private Buku buku;
+    private AnggotaPerpustakaan anggota;
+    private Date tanggalPeminjaman;
+    private String waktuPeminjaman;
+    private int durasiPeminjaman; // durasi dalam hari
+
+    // Konstruktor
+    public TransaksiPeminjaman(Buku buku, AnggotaPerpustakaan anggota, int durasiPeminjaman) {
+        this.buku = buku;
+        this.anggota = anggota;
+        this.tanggalPeminjaman = new Date();
+        // Anda perlu library tertentu untuk menangani waktu dengan lebih baik
+        // Contoh sederhana menggunakan String untuk merepresentasikan waktu
+        this.waktuPeminjaman = "12:00"; // Misalnya, pukul 12:00
+        this.durasiPeminjaman = durasiPeminjaman;
+    }
+
+    // Method untuk menghitung durasi peminjaman
+    public int calculateDurasiPeminjaman() {
+        return durasiPeminjaman;
+    }
+}
+
+
